@@ -38,12 +38,8 @@
                 <v-toolbar-title>梗体中文 · 在线构建</v-toolbar-title>
                 <v-spacer></v-spacer>
                 <div v-if="$vuetify.breakpoint.name !== 'xs'">
-                    <v-btn text rel="noopener noreferrer" href="https://www.mcbbs.net/thread-1004643-1-1.html">
-                        <v-icon left href="https://www.mcbbs.net/thread-1004643-1-1.html">mdi-post</v-icon>
-                        MCBBS
-                    </v-btn>
                     <v-btn text rel="noopener noreferrer"
-                           href="https://github.com/Teahouse-Studios/mcwzh-meme-resourcepack">
+                           href="https://github.com/rdp-studio/mcwzh-meme-resourcepack">
                         <v-icon left>mdi-github</v-icon>
                         GitHub
                     </v-btn>
@@ -67,16 +63,7 @@
 
                         <v-list dense>
                             <v-list-item rel="noopener noreferrer"
-                                         href="https://www.mcbbs.net/thread-1004643-1-1.html">
-                                <v-list-item-icon>
-                                    <v-icon>mdi-post</v-icon>
-                                </v-list-item-icon>
-                                <v-list-item-text>
-                                    MCBBS
-                                </v-list-item-text>
-                            </v-list-item>
-                            <v-list-item rel="noopener noreferrer"
-                                         href="https://github.com/lakejason0/mcwzh-meme-resourcepack">
+                                         href="https://github.com/rdp-studio/mcwzh-meme-resourcepack">
                                 <v-list-item-icon>
                                     <v-icon>mdi-github</v-icon>
                                 </v-list-item-icon>
@@ -185,64 +172,11 @@
                                        color="indigo" outlined>
                                     下载
                                 </v-btn>
-                                <v-btn v-else
-                                       @click="open('https://github.com/Teahouse-Studios/mcwzh-meme-web-builder/issues/new/choose')"
-                                       dark color="black">
-                                    <v-icon left>mdi-bug-report</v-icon>
-                                    反馈
-                                </v-btn>
                             </v-expansion-panel-content>
                         </v-expansion-panel>
                     </v-expansion-panels>
                 </div>
-                <v-divider style="margin:15px 0"></v-divider>
                 <v-row>
-                    <v-col col="12" md="6">
-                        <v-card>
-                            <v-list-item three-line>
-                                <v-list-item-content>
-                                    <div class="overline mb-4">SPONSOR</div>
-                                    <v-list-item-title class="headline mb-1">梗体中文 由 SPGoding 赞助</v-list-item-title>
-                                    <v-list-item-subtitle>SPGoding 是一位 Mojira 管理员、MCBBS 艺术家，代表作《大憨批》VSCode 插件。ta
-                                        热心的赠送了梗体中文 7 天的 MCBBS 广告位。
-                                    </v-list-item-subtitle>
-                                </v-list-item-content>
-
-                                <v-list-item-avatar tile color="grey" size="80">
-                                    <v-img src="https://www.mcbbs.net/uc_server/data/avatar/002/44/43/78_avatar_big.jpg"></v-img>
-                                </v-list-item-avatar>
-                            </v-list-item>
-
-                            <v-card-actions>
-                                <v-btn rel="noopener noreferrer" text href="https://www.mcbbs.net/?2444378">MCBBS 资料页
-                                </v-btn>
-                                <v-btn rel="noopener noreferrer" text
-                                       href="https://www.mcbbs.net/thread-926724-1-1.html">《大憨批》介绍
-                                </v-btn>
-                            </v-card-actions>
-                        </v-card>
-                    </v-col>
-                    <v-col col="12" md="6">
-                        <v-card>
-                            <v-list-item three-line>
-                                <v-list-item-content>
-                                    <div class="overline mb-4">SPONSOR</div>
-                                    <v-list-item-title class="headline mb-1">梗体中文 由 是秋夕呀mua 赞助</v-list-item-title>
-                                    <v-list-item-subtitle>是秋夕呀mua 是一位 Bilibili UP 主。她向她的 6w+ 粉丝<a href="https://www.bilibili.com/video/BV1Vt4y1v7jP">推荐了梗体中文</a>。
-                                    </v-list-item-subtitle>
-                                </v-list-item-content>
-
-                                <v-list-item-avatar tile color="grey" size="80">
-                                    <v-img src="static/qiuxi.jpg"></v-img>
-                                </v-list-item-avatar>
-                            </v-list-item>
-
-                            <v-card-actions>
-                                <v-btn rel="noopener noreferrer" text href="https://space.bilibili.com/678013610">Bilibili 主页
-                                </v-btn>
-                            </v-card-actions>
-                        </v-card>
-                    </v-col>
                 </v-row>
             </v-container>
             {% include './custom/footer.html' ignore missing %}
