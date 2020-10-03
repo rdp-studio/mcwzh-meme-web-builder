@@ -45,7 +45,7 @@ async def ajax(request: web.Request):
     log = []
     async with builder_lock:
         global build_time
-        if build_time + 60 < time.time():
+        if build_time + 3600 < time.time():
             build_time = time.time()
             proc = await asyncio.create_subprocess_exec("git", "pull", "origin", "master", "--recurse-submodules",
                                                         stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
@@ -57,7 +57,7 @@ async def ajax(request: web.Request):
                                                         stdin=subprocess.DEVNULL)
             log.append(str((await proc.communicate())[0], encoding="utf-8", errors="ignore"))
         else:
-            log.append("A cache within 60 seconds is available, skipping update\n")
+            log.append("A cache within 1 hour is available, skipping update\n")
         if not data["_be"]:
             builder = importlib.import_module('meme-pack-java.build').builder()
         else:
