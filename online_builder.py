@@ -51,6 +51,11 @@ async def ajax(request: web.Request):
                                                         stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
                                                         stdin=subprocess.DEVNULL)
             log.append(str((await proc.communicate())[0], encoding="utf-8", errors="ignore"))
+
+            proc = await asyncio.create_subprocess_exec("git", "submodule", "update", "--remote",
+                                                        stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
+                                                        stdin=subprocess.DEVNULL)
+            log.append(str((await proc.communicate())[0], encoding="utf-8", errors="ignore"))
         else:
             log.append("A cache within 60 seconds is available, skipping update\n")
         if not data["_be"]:
