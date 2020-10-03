@@ -1,4 +1,4 @@
-# 梗体中文 · 在线打包
+# 梗体中文 · 在线打包 V2
 
 这里是网页部署部分，若要更新内容请前往 [基岩版仓库](https://github.com/rdp-studio/mcwzh-meme-resourcepack-bedrock/) 或 [Java版仓库](https://github.com/Trdp-studio/mcwzh-meme-resourcepack/)
 
